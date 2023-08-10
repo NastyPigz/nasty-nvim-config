@@ -1,1 +1,0 @@
-# nasty-nvim-config
