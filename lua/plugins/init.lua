@@ -306,6 +306,40 @@ local default_plugins = {
       require("presence").setup(opts)
     end
   },
+
+  {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+       require('dashboard').setup {
+         -- config
+       }
+    end,
+    dependencies = { {'nvim-tree/nvim-web-devicons'}}
+  },
+
+  {
+    'ThePrimeagen/vim-be-good',
+    cmd = { "VimBeGood" }
+  },
+
+  {
+    'alec-gibson/nvim-tetris',
+    cmd = { "Tetris" }
+  },
+
+  {
+    'seandewar/killersheep.nvim',
+    cmd = { "KillKillKill" }
+  },
+
+  {
+    'jbyuki/instant.nvim',
+    cmd = { "InstantStartServer", "InstantStopServer", "InstantStartSingle", "InstantJoinSingle", "InstantStop", "InstantStartSession", "InstantJoinSession", "InstantStop", "InstantStatus", "InstantFollow", "InstantStopFollow", "InstantOpenAll", "InstantSaveAll", "InstantMark", "InstantMarkClear" },
+    config = function ()
+      vim.g.instant_username = "balls"
+    end
+  }
 }
 
 local config = require("core.utils").load_config()
